@@ -9,10 +9,12 @@ class Router {
 	
 	mount(api){
 		
+		const self = this;
+			
 		api.get('/', function (req, res) {
 
 			console.log('Answering question: ' + req.query.d);
-			return this.parseRequest(req,res);
+			return self.parseRequest(req,res);
 		});
 	}
 	
