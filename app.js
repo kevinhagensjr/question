@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const config = require('./conf/config');
+const config = require('./config');
 
 class QuestionAPI{
 	
