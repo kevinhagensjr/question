@@ -8,7 +8,7 @@ class Router {
 	
 	mount(api){
 		
-		app.get('/', function (req, res) {
+		api.get('/', function (req, res) {
 			console.log(JSON.stringify(req));
 			console.log(JSON.stringify(req.body));
 		});
