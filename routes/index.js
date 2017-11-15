@@ -23,51 +23,51 @@ class Router {
 		
 		switch(question){
 			
-			case: 'Ping':
+			case 'Ping':
 				return controller.ping(req,res);
 			break;
 			
-			case: 'Staus':
+			case 'Staus':
 				return controller.status(req,res);
 			break;
 			
-			case: 'Position':
+			case 'Position':
 				return controller.position(req,res);
 			break;
 			
-			case: 'Years':
+			case 'Years':
 				return controller.years(req,res);
 			break;
 			
-			case: 'Phone':
+			case 'Phone':
 				return controller.phone(req,res);
 			break;
 			
-			case: 'Name':
+			case 'Name':
 				return controller.name(req,res);
 			break;
 			
-			case: 'Source':
+			case 'Source':
 				return controller.source(req,res);
 			break;
 			
-			case: 'Referrer':
+			case 'Referrer':
 				return controller.referrer(req,res);
 			break;
 			
-			case: 'Degree':
+			case 'Degree':
 				return controller.degree(req,res);
 			break;
 			
-			case: 'Puzzle':
+			case 'Puzzle':
 				return controller.puzzle(req,res);
 			break;
 			
-			case: 'Resume':
+			case 'Resume':
 				return controller.resume(req,res);
 			break;
 			
-			case: 'Email Address':
+			case 'Email Address':
 				return controller.email(req,res);
 			break;
 			
