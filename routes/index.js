@@ -10,9 +10,10 @@ class Router {
 		
 		api.get('/', function (req, res) {
 
-			console.log(JSON.stringify(req.body));
+			console.log('params: ' + JSON.stringify(req.params));
+			console.log('query: ' + JSON.stringify(req.query));
 			
-			res.send("ok");
+			res.send("OK");
 		});
 	}
 }
