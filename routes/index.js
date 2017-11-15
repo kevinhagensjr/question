@@ -72,7 +72,7 @@ class Router {
 			break;
 			
 			default:
-				return req.send('Failed to parse question'); //In case different question sent
+				return res.send('Failed to parse question'); //In case different question sent
 			break;
 		}
 	}
