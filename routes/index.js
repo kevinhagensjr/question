@@ -29,7 +29,7 @@ class Router {
 				return controller.ping(req,res);
 			break;
 			
-			case 'Staus':
+			case 'Status':
 				return controller.status(req,res);
 			break;
 			
