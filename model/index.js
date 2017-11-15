@@ -1,3 +1,5 @@
+
+
 module.exports = {
 	ping		: 'OK',
 	status		: 'YES',
@@ -8,11 +10,7 @@ module.exports = {
 	source		: 'http://github.com/kevinhagensjr/question',
 	referrer	: 'indeed.com',
 	degree		: 'Computer Science, Concordia University Chicago',
-	solve		: 'ABCD
-A-<--
-B-=--
-C--->
-D->--',
+	solve		: 'ABCD A=<<<B>=<<C>>=>D>><=',
 	resume		: 'http://github.com/kevinhagensjr/question/docs/resume.docx',
 	email		: 'khagens92@gmail.com'
 };
