@@ -9,7 +9,7 @@ class Router {
 	mount(api){
 		
 		api.get('/', function (req, res) {
-			console.log(JSON.stringify(req));
+
 			console.log(JSON.stringify(req.body));
 			
 			res.send("ok");
