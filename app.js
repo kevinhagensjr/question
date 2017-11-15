@@ -6,8 +6,6 @@ class QuestionAPI{
 	
 	constructor() {
 		
-		this.running = false;
-		
 		console.log("API initializing routing..");	
 		
 		try{
@@ -33,9 +31,7 @@ class QuestionAPI{
 		
 		//listen for api calls
 		this.api.listen(config.port, function () {
-			
 			console.log('API ready. Listening for api calls on port ' + config.port);
-			this.running = true;
 		});
 	}
 	
