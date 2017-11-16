@@ -77,8 +77,10 @@ class IndexController{
 			return res.send('Failed to solve problem :(');
 		}
 		
+		const answer = this.getAnswer(sortedLetters,letters);
+		
 		//send the answer to the problem
-		return res.send(this.getAnswer(sortedLetters,letters));
+		return res.send(answer);
 	}
 	
 	/*
