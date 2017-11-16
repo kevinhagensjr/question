@@ -73,7 +73,7 @@ class IndexController{
 		const letters     = expressions[0].split(''); //get original letter order
 		const sortedLetters = this.sortLetters(expressions,letters); //sort letters based on inequalities
 		
-		if(!sortedLetters || sortedLetters.length != letter.length){
+		if(!sortedLetters || sortedLetters.length != letters.length){
 			return res.send('Failed to solve problem :(');
 		}
 		
