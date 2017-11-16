@@ -10,6 +10,6 @@ module.exports = {
 	source		: 'http://github.com/kevinhagensjr/question',
 	referrer	: 'indeed.com',
 	degree		: 'Computer Science, Concordia University Chicago',
-	resume		: 'http://github.com/kevinhagensjr/question/docs/resume.docx',
+	resume		: 'https://s3-us-west-2.amazonaws.com/kevin-general/application.zip',
 	email		: 'khagens92@gmail.com'
 };
