@@ -71,10 +71,13 @@ class IndexController{
 		//strip instructions from question, turn into array
 		const expressions = question.replace('Please solve this puzzle:', '').split('\n');
 		const letters     = expressions[0].split(''); //get original letter order
+		
+		console.log('letters: ' + letters + ' exprssions: ' + expressions);
+		
 		const sortedLetters = this.sortLetters(expressions,letters); //sort letters based on inequalities
 		
 		if(!sortedLetters || sortedLetters.length != letters.length){
-			return res.send('Failed to solve problem :(');
+			return 'Failed to solve problem :(';
 		}
 		
 		const answer = this.getAnswer(sortedLetters,letters);
