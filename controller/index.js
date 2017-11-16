@@ -80,7 +80,7 @@ class IndexController{
 		const answer = this.getAnswer(sortedLetters,letters);
 		
 		//send the answer to the problem
-		return res.send(answer);
+		return answer;
 	}
 	
 	/*
