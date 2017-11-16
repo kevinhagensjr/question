@@ -69,8 +69,9 @@ class IndexController{
 	solve(question){
 		
 		//strip instructions from question, turn into array
-		const strippedInstructions = question.replace('Please solve this puzzle:', '')
-		const expressions = strippedInstructions.split('\n').shift();
+		const strippedInstructions = question.replace('Please solve this puzzle:', '');
+		console.log(strippedInstructions.length);
+		const expressions = strippedInstructions.split('\n').shift().pop();
 		const letters     = expressions[0].split(''); //get original letter order
 		
 		console.log('letters: ' + letters + ' expressions: ' + expressions );
