@@ -71,23 +71,17 @@ class IndexController{
 		//strip instructions from question, turn into array
 		const strippedInstructions = question.replace('Please solve this puzzle:', '');
 		const expressions = strippedInstructions.split('\n');
-		console.log(expressions.length);
-		expressions.shift();
-		expressions.pop();
+		expressions.shift(); //remove null space in front
+		expressions.pop(); //remove trailing endline
+		
 		const letters     = expressions[0].split(''); //get original letter order
-		
-		console.log('letters: ' + letters + ' expressions: ' + expressions );
-		
 		const sortedLetters = this.sortLetters(expressions,letters); //sort letters based on inequalities
 		
 		if(!sortedLetters || sortedLetters.length != letters.length){
 			return 'Failed to solve problem :(';
 		}
 		
-		const answer = this.getAnswer(sortedLetters,letters);
-		
-		//send the answer to the problem
-		return answer;
+		return this.getAnswer(sortedLetters,letters);
 	}
 	
 	/*
@@ -205,7 +199,6 @@ class IndexController{
 		}
 	
 		return matrix.join('\n');
-
 	}
 }
 
