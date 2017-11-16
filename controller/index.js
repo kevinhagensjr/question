@@ -70,7 +70,7 @@ class IndexController{
 		
 		//strip instructions from question, turn into array
 		const expressions = question.replace('Please solve this puzzle:', '').split('\n');
-		const letters     = expressions[0].split(''); //get original letter order
+		const letters     = expressions[1].split(''); //get original letter order
 		
 		console.log('letters: ' + letters + ' exprssions: ' + expressions);
 		
@@ -93,7 +93,7 @@ class IndexController{
 	*/
 	sortLetters(expressions,letters){
 		
-		let sortedLetters = expressions[0].split('');
+		let sortedLetters = expressions[1].split('');
 		let ordering = true;
 		
 		//sort letters based on inequalities
@@ -101,12 +101,12 @@ class IndexController{
 		
 			var updated = false; //check to see if order has been updated
 		
-			for(let i = 1; i < expressions.length; i++){
+			for(let i = 2; i < expressions.length; i++){
 				
 				const expression = expressions[i]; //expression for current letter
-				const letter = expression.charAt(0); //letter of current expression
+				const letter = expression.charAt(1); //letter of current expression
 				
-				for(let x = 1; x < expression.length; x++){
+				for(let x = 2; x < expression.length; x++){
 					
 					const operator = expression.charAt(x); //current operator in expression
 									
@@ -165,9 +165,9 @@ class IndexController{
 		
 		var matrix = []; //holds answers to inequalites on n x n matrix
 	
-		for(let i = 0; i < letters.length; i++){
+		for(let i = 2; i < letters.length; i++){
 			
-			if(i == 0){
+			if(i == 2){
 				matrix.push(letters.join(''));
 				continue;
 			}
@@ -176,7 +176,7 @@ class IndexController{
 			let row = [];
 			row.push(letter);
 			
-			for(let x =1; x < sortedLetters.length; x++){
+			for(let x =2; x < sortedLetters.length; x++){
 				
 				const currentLetter = letters[x];
 				
@@ -200,8 +200,9 @@ class IndexController{
 			matrix.push(row.join(''));
 		}
 	
-		return matrix.join('\n');
-
+		const answer =  matrix.join('\n');
+		console.log(answer);
+		return answer;
 	}
 }
 
